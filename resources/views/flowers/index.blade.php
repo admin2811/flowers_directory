@@ -33,9 +33,9 @@
             </td>
             <td class="align-middle">
                 <div class="btn-group" role="group" aria-label="Basic example">
-                    <a href="{{ route('flowers.show', $rs->id)}}" type="button" class="btn btn-secondary">Detail</a>
-                    <a href="{{ route('flowers.edit', $rs->id)}}" type="button" class="btn btn-warning">Edit</a>
-                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal-{{ $rs->id }}"> Delete </button>
+                    <a href="{{ route('flowers.show', $rs->id)}}" type="button" class="btn btn-secondary"><i class="fa-solid fa-eye"></i></a>
+                    <a href="{{ route('flowers.edit', $rs->id)}}" type="button" class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i></a>
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal-{{ $rs->id }}"><i class="fa-solid fa-trash"></i></button>
                         <div class="modal fade" id="deleteModal-{{ $rs->id }}" tabindex="- 1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
