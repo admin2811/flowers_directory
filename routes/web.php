@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FlowerController;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\BookController;
 use App\Models\Flower;
 
 
@@ -20,3 +21,4 @@ use App\Models\Flower;
 Route::get('/',[FlowerController::class,'index']);
 Route::resource('flowers',FlowerController::class);
 Route::resource('students',StudentController::class);
+Route::resource('books',BookController::class);

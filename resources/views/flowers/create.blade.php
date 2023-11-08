@@ -9,15 +9,12 @@
         <label for="name">Tên loài hoa:</label>
         <input type="text" name="name" id="name" required class="form-control">
         <br>
-
         <label for="description">Mô tả:</label>
         <textarea name="description" id="description" required class="form-control"></textarea>
         <br>
-
         <label for="image_url">Đường dẫn ảnh:</label>
         <input type="file" name="image_url" id="image_url" required class="form-control">
         <br>
-
         <label for="regions">Danh sách khu vực phân bố:</label>
         <div id="regions-container">
             <input type="text" name="regions[]" required class="form-control">
