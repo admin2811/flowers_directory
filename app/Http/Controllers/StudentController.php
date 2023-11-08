@@ -134,10 +134,14 @@ class StudentController extends Controller
     
         // Cập nhật ảnh nếu được tải lên
         if ($request->hasFile('student_photo')) {
-            $imagePath = $request->file('student_photo')->store('img', 'public');
-            $student->update(['student_photo' => $imagePath]);
+            $image = $request->file('student_photo');
+            $name = time() . '.' . $image->getClientOriginalExtension();
+            $destinationPath = public_path('/img');
+            $image->move($destinationPath, $name);
+            $student->update([
+                'student_photo' => $name,
+            ]);
         }
-    
         // Xóa tất cả các khóa học đã liên kết trước đó
         if ($request->has('courses')) {
             $courseIds = $request->input('courses');
